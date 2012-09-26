@@ -1,0 +1,87 @@
+.reveal h1, .reveal h2 { margin-top: 150px; }
+.reveal h3 { margin-top: 50px; }
+.reveal ol { margin-left: 150px; }
+
+@-webkit-keyframes wave{
+	0%, 100% {
+		-webkit-filter: custom(url(shaders/vertex/wave.vs) mix(url(shaders/fragment/default.fs) normal source-atop), 20 20, angle -60.0, power 2.5);
+	}
+
+	50% {
+		-webkit-filter: custom(url(shaders/vertex/wave.vs) mix(url(shaders/fragment/default.fs) normal source-atop), 20 20, angle 40.0, power 2.5);
+	}
+}
+
+.reveal section .crop img  {
+	width: 400px;
+	 -webkit-filter: custom(url(shaders/vertex/wave.vs) mix(url(shaders/fragment/default.fs) normal source-atop), 20 20, angle -60.0, power 2.5);
+}
+
+.reveal section .crop img:hover {
+	-webkit-animation: wave ease-in-out 6s infinite;
+}
+
+.reveal section .crop { 
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	width: 600px;
+	height: 420px;
+}
+
+.reveal section .crop p { 
+	margin: 0;
+	position: absolute;
+	border-style: none;
+	top: -130px;
+	left: -70px;
+	margin-right: -75px;
+}
+
+.reveal section .crop p img { 
+	border-style: none;
+	width: 100%;
+	height: 100%;
+}
+
+@-webkit-keyframes plasma{
+	0%, 100% {
+		-webkit-filter: custom(url(shaders/vertex/default.vs) mix(url(shaders/fragment/plasma.fs) exclusion source-atop), 50 50 border-box detached, time 0, resolution 800 800);
+	}
+
+	50% {
+		-webkit-filter: custom(url(shaders/vertex/default.vs) mix(url(shaders/fragment/plasma.fs) exclusion source-atop), 50 50 border-box detached, time 35, resolution 800 800);
+	}
+}
+
+#plasma-content {
+	-webkit-animation: plasma ease-in-out 10s infinite;
+}
+
+#plasma-content img {
+	width: 600px;
+}
+
+#curltree {
+	width: 600px;
+}
+
+#curl-content {
+	width: 600px;
+}
+
+@-webkit-keyframes page-curl{
+	0% {
+		-webkit-filter: custom(url(shaders/vertex/curl.vs) mix(url(shaders/fragment/curl.fs) multiply source-atop), 50 50 border-box detached, pointLightColor 1 1 1, ambientLightColor 0.0 0.0 0.0, coneApex -0.87, coneAngle 90, pageRotation 0, pointLightPosition 0 0 1);
+	}
+
+	100% {
+		-webkit-filter: custom(url(shaders/vertex/curl.vs) mix(url(shaders/fragment/curl.fs) multiply source-atop), 50 50 border-box detached, pointLightColor 1 1 1, ambientLightColor 0.0 0.0 0.0, coneApex -0.87, coneAngle 30, pageRotation 60, pointLightPosition 0 0 1);
+	}
+}
+
+#curlcontent:hover{
+	-webkit-animation: page-curl ease-in-out 3s 1;
+}
+	

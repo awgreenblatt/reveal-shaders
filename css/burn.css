@@ -1,0 +1,96 @@
+/*********************************************
+ * BURN TRANSITION
+ *********************************************/
+
+.reveal.burn .slides>section,
+.reveal.burn .slides>section>section {
+}
+
+	.reveal.burn .slides>section.present {
+		display: block;
+		z-index: 11;
+		opacity: 1;
+
+		-webkit-transform: none;
+		-webkit-filter: custom(url(shaders/vertex/burn.vs) mix(url(shaders/fragment/burn.fs) multiply source-atop), 50 50 border-box, transform perspective(1000) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg), amount 0, randomSeed 0);
+		-webkit-transition-duration: 2s;
+		/*z-index: 0;*/
+	}
+
+	.reveal.burn .slides {
+		margin-top: -350px;
+
+	}
+
+	.reveal.burn .slides section {
+		padding: 30px;
+
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	}
+
+	.reveal.burn .slides section.past {
+		/*z-index: 12;*/
+	}
+
+	.reveal.burn .slides section:not(.stack):before {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		background: rgba(0,0,0,0.2);
+
+		/*-webkit-filter: custom(url(shaders/burn.vs) mix(url(shaders/burn.fs) multiply source-atop), 50 50 border-box, transform perspective(1000) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg), amount 1);*/
+	}
+
+	.reveal.burn .slides section:not(.stack):after {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 90%;
+		height: 30px;
+		left: 5%;
+		bottom: 0;
+		background: none;
+		/*z-index: 1;*/
+
+		border-radius: 4px;
+		box-shadow: 0px 95px 25px rgba(0,0,0,0.2);
+
+		/*-webkit-filter: custom(url(shaders/burn.vs) mix(url(shaders/burn.fs) multiply source-atop), 50 50 border-box, transform perspective(1000) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg), amount 1);*/
+	}
+
+	.reveal.burn .slides>section.stack {
+		padding: 0;
+		background: none;
+	}
+
+	.reveal.burn .slides>section.past {
+		-webkit-transform: none;
+		/*z-index: -1;*/
+		
+
+		-webkit-filter: custom(url(shaders/vertex/burn.vs) mix(url(shaders/fragment/burn.fs) multiply source-atop), 50 50 border-box, transform perspective(1000) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg), amount 1, randomSeed 0);
+			-webkit-transition-duration: 2s;
+			/*-webkit-transition-delay: 5s;*/
+	}
+
+	.reveal.burn .slides>section.future {
+		-webkit-transform: none;
+		/*z-index: -1;*/
+			-webkit-transition-duration: 2s;
+			/*-webkit-transition-delay: 5s;*/
+		-webkit-filter: custom(url(shaders/vertex/burn.vs) mix(url(shaders/fragment/burn.fs) multiply source-atop), 50 50 border-box, transform perspective(1000) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg), amount 1, randomSeed 0);
+	}
+
+	.reveal.burn .slides>section>section.past {
+		/*-webkit-filter: custom(url(shaders/burn.vs) mix(url(shaders/burn.fs) multiply source-atop), 50 50 border-box, transform perspective(1000) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg), amount 1);*/
+	}
+
+	.reveal.burn .slides>section>section.future {
+		/*-webkit-filter: custom(url(shaders/burn.vs) mix(url(shaders/burn.fs) multiply source-atop), 50 50 border-box, transform perspective(1000) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg), amount 1);*/
+	}
