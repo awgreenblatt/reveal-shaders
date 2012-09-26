@@ -8,7 +8,7 @@ At present you must use <a href="http://html.adobe.com/webstandards/csscustomfil
 
 Right now, the custom filter transitions are only used for the top level navigation.  When you want to navigate down a stack and one of the CSS Custom Filter transitions is acive, the box transition is used instead to differentiate.
 
-Check out my other experiments on <http://blattchat.com>
+Check out my other experiments on <http://blattchat.com>.
 
 Enjoy!
 
