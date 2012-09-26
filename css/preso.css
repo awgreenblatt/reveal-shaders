@@ -85,3 +85,20 @@
 	-webkit-animation: page-curl ease-in-out 3s 1;
 }
 	
+.reveal .footer {
+	position: fixed;
+	margin: 20px 0 0 20px;
+}
+
+.reveal .footer a {
+	font-family: Arial;
+	font-size: 0.83em;
+	position: absolute;
+	opacity: 0.1;
+}
+.reveal .footer a.enabled {
+	opacity: 0.6;
+}
+.reveal .footer a.enabled:active {
+	margin-top: 1px;
+}
