@@ -1,7 +1,7 @@
 reveal-shaders
 ==================
 
-This is a [reveal.js](http://lab.hakim.se/reveal-js/#/) presentation which uses [CSS Custom Filters](http://html.adobe.com/webstandards/csscustomfilters/) for transitions between slides.
+This is a [reveal.js](http://lab.hakim.se/reveal-js/#/){:target="_blank"} presentation which uses [CSS Custom Filters](http://html.adobe.com/webstandards/csscustomfilters/) for transitions between slides.
 
 At present you must use [Chrome Canary](http://html.adobe.com/webstandards/csscustomfilters/) to view the CSS Custom Filters.
 
