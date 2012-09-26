@@ -1,7 +1,3 @@
-reveal-shaders
-==================
-
-
 This is a <a href="http://lab.hakim.se/reveal-js/#/" target="_blank">reveal.js</a> presentation which uses <a href="http://html.adobe.com/webstandards/csscustomfilters" target="_blank">CSS Custom Filters</a> for transitions between slides.
 
 At present you must use <a href="http://html.adobe.com/webstandards/csscustomfilters/" target="_blank">Google Chrome Canary</a> to view the CSS Custom Filters.
