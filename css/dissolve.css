@@ -1,0 +1,81 @@
+/*********************************************
+ * DISSOLVE TRANSITION
+ *********************************************/
+
+.reveal.dissolve .slides>section,
+.reveal.dissolve .slides>section>section {
+}
+
+	.reveal.dissolve .slides>section.present {
+		display: block;
+		/*z-index: 11;*/
+		opacity: 1;
+
+		-webkit-transform: none;
+		-webkit-filter: custom(url(shaders/dissolve.vs) mix(url(shaders/dissolve.fs) multiply source-atop), 50 50 border-box, transform perspective(1000) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg), amount 0.0);
+		-webkit-transition-duration: 2s;
+	}
+
+	.reveal.dissolve .slides {
+		margin-top: -350px;
+
+	}
+
+	.reveal.dissolve .slides section {
+		padding: 30px;
+
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	}
+
+	.reveal.dissolve .slides section.past {
+	}
+
+	.reveal.dissolve .slides section:not(.stack):before {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		background: rgba(0,0,0,0.2);
+	}
+
+	.reveal.dissolve .slides section:not(.stack):after {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 90%;
+		height: 30px;
+		left: 5%;
+		bottom: 0;
+		background: none;
+
+		border-radius: 4px;
+		box-shadow: 0px 95px 25px rgba(0,0,0,0.2);
+	}
+
+	.reveal.dissolve .slides>section.stack {
+		padding: 0;
+		background: none;
+	}
+
+	.reveal.dissolve .slides>section.past {
+		-webkit-transform: none;		
+		-webkit-filter: custom(url(shaders/dissolve.vs) mix(url(shaders/dissolve.fs) multiply source-atop), 50 50 border-box, transform perspective(1000) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg), amount 0.8);
+			-webkit-transition-duration: 2s;
+	}
+
+	.reveal.dissolve .slides>section.future {
+		-webkit-transform: none;
+		-webkit-transition-duration: 2s;
+		-webkit-filter: custom(url(shaders/dissolve.vs) mix(url(shaders/dissolve.fs) multiply source-atop), 50 50 border-box, transform perspective(1000) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg), amount 0.8);
+	}
+
+	.reveal.dissolve .slides>section>section.past {
+	}
+
+	.reveal.dissolve .slides>section>section.future {
+	}

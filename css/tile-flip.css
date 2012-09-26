@@ -1,0 +1,82 @@
+/*********************************************
+ * BURN TRANSITION
+ *********************************************/
+
+.reveal.tileflip .slides>section,
+.reveal.tileflip .slides>section>section {
+}
+
+.reveal.tileflip .slides>section.present {
+	display: block;
+	z-index: 11;
+	opacity: 1;
+
+	-webkit-transform: none;
+	-webkit-filter: custom(url(shaders/vertex/tile-flip.vs) mix(url(shaders/fragment/tile-flip.fs) multiply source-atop), 25 32 border-box detached, transform perspective(1000) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg), amount 0, randomness 2, flipAxis 0 1 0, tileOutline 1) opacity(100%);
+
+	-webkit-transition-duration: 2s;
+}
+
+.reveal.tileflip .slides {
+	margin-top: -350px;
+}
+
+.reveal.tileflip .slides section {
+	padding: 30px;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+        box-sizing: border-box;
+}
+
+.reveal.tileflip .slides section.past {
+}
+
+.reveal.tileflip .slides section:not(.stack):before {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: rgba(0,0,0,0.2);
+}
+
+.reveal.tileflip .slides section:not(.stack):after {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 90%;
+	height: 30px;
+	left: 5%;
+	bottom: 0;
+	background: none;
+
+	border-radius: 4px;
+	box-shadow: 0px 95px 25px rgba(0,0,0,0.2);
+}
+
+.reveal.tileflip .slides>section.stack {
+	padding: 0;
+	background: none;
+}
+
+.reveal.tileflip .slides>section.past {
+	-webkit-transform: none;
+	
+	-webkit-filter: custom(url(shaders/vertex/tile-flip.vs) mix(url(shaders/fragment/tile-flip.fs) multiply source-atop), 25 32 border-box detached, transform perspective(1000) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg), amount 1, randomness 2, flipAxis 0 1 0, tileOutline 1) opacity(0%);
+	-webkit-transition-duration: 2s;
+}
+
+.reveal.tileflip .slides>section.future {
+	-webkit-transform: none;
+	-webkit-transition-duration: 2s;
+	-webkit-filter: custom(url(shaders/vertex/tile-flip.vs) mix(url(shaders/fragment/tile-flip.fs) multiply source-atop), 25 32 border-box detached, transform perspective(1000) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg), amount 0.5, randomness 2, flipAxis 0 1 0, tileOutline 1) opacity(0%);
+}
+
+.reveal.tileflip .slides>section>section.past {
+}
+
+.reveal.tileflip .slides>section>section.future {
+}
