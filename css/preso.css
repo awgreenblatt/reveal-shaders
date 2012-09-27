@@ -92,7 +92,7 @@
 
 .reveal .footer a {
 	font-family: Arial;
-	font-size: 0.83em;
+	font-size: 0.7em;
 	position: absolute;
 	opacity: 0.1;
 }
@@ -101,4 +101,9 @@
 }
 .reveal .footer a.enabled:active {
 	margin-top: 1px;
+}
+
+body {
+	background: none;
+	background-color: #2b2b2b;
 }
