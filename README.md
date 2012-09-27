@@ -10,5 +10,7 @@ If you want to see what this looks like, check out this Youtube video: <a href="
 
 Check out my other experiments on <http://blattchat.com>.
 
+If you want simply want to add these extensions to your existing reveal.js presentation, all you need to do is add the css/shaders folder and the shader-specific css files (burn.css, dissolve.css & tile-flip.css) to your existing css folder and then include the css files from index.html.
+
 Enjoy!
 
