@@ -6,11 +6,7 @@ If you are using Google Chrome Canary with CSS Shaders enabled, you can view the
 
 Right now, the custom filter transitions are only used for the top level navigation.  When you want to navigate down a stack and one of the CSS Custom Filter transitions is acive, the box transition is used instead to differentiate.
 
-If you want to see what this looks like, check out this Youtube video: <a href="http://youtu.be/s2p512eVsmE" target="_blank">http://youtu.be/s2p512eVsmE</a>
-
-
-<iframe width="640" height="480" src="http://www.youtube.com/embed/s2p512eVsmE?rel=0&modestbranding=1&vq=hd720" frameborder="0" allowfullscreen>
-</iframe>
+If you want to see what this looks like, check out this Youtube video: <a href="http://youtu.be/s2p512eVsmE&vq=720" target="_blank">http://youtu.be/s2p512eVsmE</a>
 
 Check out my other experiments on <http://blattchat.com>.
 
