@@ -8,6 +8,10 @@ Right now, the custom filter transitions are only used for the top level navigat
 
 If you want to see what this looks like, check out this Youtube video: <a href="http://youtu.be/s2p512eVsmE" target="_blank">http://youtu.be/s2p512eVsmE</a>
 
+
+<iframe width="640" height="480" src="http://www.youtube.com/embed/s2p512eVsmE?rel=0&modestbranding=1&vq=hd720" frameborder="0" allowfullscreen>
+</iframe>
+
 Check out my other experiments on <http://blattchat.com>.
 
 If you want simply want to add these extensions to your existing reveal.js presentation, all you need to do is add the css/shaders folder and the shader-specific css files (burn.css, dissolve.css & tile-flip.css) to your existing css folder and then include the css files from index.html.
